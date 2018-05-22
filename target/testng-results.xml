@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="9" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Test Suite" duration-ms="59558" started-at="2018-05-16T14:48:25Z" finished-at="2018-05-16T14:49:25Z">
+    <groups>
+    </groups>
+    <test name="DemoQA" duration-ms="59558" started-at="2018-05-16T14:48:25Z" finished-at="2018-05-16T14:49:25Z">
+      <class name="SmokeTest">
+        <test-method status="PASS" signature="openDemoQA()[pri:0, instance:SmokeTest@d2cc05a]" name="openDemoQA" is-config="true" duration-ms="16" started-at="2018-05-16T22:48:25Z" finished-at="2018-05-16T22:48:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openDemoQA -->
+        <test-method status="PASS" signature="registerProduct()[pri:0, instance:SmokeTest@d2cc05a]" name="registerProduct" duration-ms="26161" started-at="2018-05-16T22:48:25Z" finished-at="2018-05-16T22:48:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerProduct -->
+        <test-method status="PASS" signature="verifyAutoCompleteFirstSuggestion()[pri:0, instance:SmokeTest@d2cc05a]" name="verifyAutoCompleteFirstSuggestion" duration-ms="8749" started-at="2018-05-16T22:48:52Z" finished-at="2018-05-16T22:49:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAutoCompleteFirstSuggestion -->
+        <test-method status="PASS" signature="verifyFirstItemIsSelected()[pri:0, instance:SmokeTest@d2cc05a]" name="verifyFirstItemIsSelected" duration-ms="7028" started-at="2018-05-16T22:49:00Z" finished-at="2018-05-16T22:49:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFirstItemIsSelected -->
+        <test-method status="PASS" signature="verifyInvalidSend()[pri:0, instance:SmokeTest@d2cc05a]" name="verifyInvalidSend" duration-ms="4313" started-at="2018-05-16T22:49:07Z" finished-at="2018-05-16T22:49:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvalidSend -->
+        <test-method status="PASS" signature="verifyNewWindowIsOpened()[pri:0, instance:SmokeTest@d2cc05a]" name="verifyNewWindowIsOpened" duration-ms="2662" started-at="2018-05-16T22:49:12Z" finished-at="2018-05-16T22:49:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNewWindowIsOpened -->
+        <test-method status="PASS" signature="verifyPasswordRequiredMessage()[pri:0, instance:SmokeTest@d2cc05a]" name="verifyPasswordRequiredMessage" duration-ms="4804" started-at="2018-05-16T22:49:14Z" finished-at="2018-05-16T22:49:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPasswordRequiredMessage -->
+        <test-method status="PASS" signature="verifyPasswordStrengthBar()[pri:0, instance:SmokeTest@d2cc05a]" name="verifyPasswordStrengthBar" duration-ms="1844" started-at="2018-05-16T22:49:19Z" finished-at="2018-05-16T22:49:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPasswordStrengthBar -->
+        <test-method status="PASS" signature="verifySendmsgContact()[pri:0, instance:SmokeTest@d2cc05a]" name="verifySendmsgContact" duration-ms="3957" started-at="2018-05-16T22:49:21Z" finished-at="2018-05-16T22:49:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySendmsgContact -->
+      </class> <!-- SmokeTest -->
+    </test> <!-- DemoQA -->
+  </suite> <!-- Test Suite -->
+</testng-results>
