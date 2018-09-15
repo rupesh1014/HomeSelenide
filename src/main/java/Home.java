@@ -1,4 +1,5 @@
 import com.codeborne.selenide.*;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
 import java.awt.*;
@@ -17,30 +18,38 @@ public class Home extends CommonMethods{
     SelenideElement selected=$(By.id("menu-item-142"));
     SelenideElement frame=$(By.id("menu-item-148"));
 
+    @Step("Open Registration page")
     public Registration clickRegistrationPage(){
     clickElement(registration);
     verifyElementPresent(registrationHeader);
     return Selenide.page(Registration.class);
 }
+@Step("Verify Home Page")
     public void verifyHomePage(){
     verifyElementPresent(homeHeader);
 }
+@Step("Click Contact Page")
     public Contact clickContactPage(){
         clickElement(contact);
         verifyElementPresent(contact);
         return Selenide.page(Contact.class);
             }
 
+ @Step("click auto complete")
     public AutoComplete clickAutoCompletePage(){
         clickElement(autoComplete);
         verifyElementPresent(autoComplete);
         return Selenide.page(AutoComplete.class);
     }
+
+ @Step("click selected page")
     public Selected clickSelectedPage(){
         clickElement(selected);
         verifyElementPresent(selected);
         return Selenide.page(Selected.class);
     }
+
+ @Step("Click frame page")
     public Frame clickFramePage(){
         clickElement(frame);
         verifyElementPresent(frame);

@@ -1,5 +1,6 @@
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import org.openqa.selenium.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +17,7 @@ public class Contact extends CommonMethods {
     SelenideElement msg = $(By.name("your-message"));
     SelenideElement send = $(By.xpath("//input[@value='Send']"));
     SelenideElement confirmationMsg = $(By.xpath("//div[contains(@class,'wpcf7-response-output')]"));
-
+@Step("Send message Succdessfully")
     public void sendMessageSuccessfully() {
         log.info("Enter:Send messgae");
         enterText(firstName,"Rupesh");
@@ -27,6 +28,9 @@ public class Contact extends CommonMethods {
         confirmationMsg.shouldHave(Condition.text("Your message was sent successfully. Thanks."));
         log.info("Exit:Sent messgae");
     }
+
+ @Step("Incorrect Sending")
+
     public void incorrectSending() {
         log.info("Enter:try incorrect Sending");
         enterText(firstName,"Rupesh");

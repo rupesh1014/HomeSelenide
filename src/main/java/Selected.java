@@ -1,5 +1,6 @@
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,13 +14,14 @@ public class Selected extends CommonMethods {
     public SelenideElement firstItemSelected=$(By.xpath("//li[contains(@class,'selected')]"));
     public SelenideElement firstElement=$(By.xpath("//*[@id=\"selectable\"]/li[1]"));
 
-
+@Step("Check First Item Selected")
     public void checkFirstItemSelected(){
         firstItemSelected.shouldNot(Condition.visible);
         log.info("first Item is not selected");
         clickElement(firstElement);
         verifyElementPresent(firstItemSelected);
         log.info("first Item is not selected");
-        sleep(5000);
+
+      //  firstItemSelecte
     }
 }

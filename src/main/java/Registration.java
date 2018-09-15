@@ -3,6 +3,9 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.conditions.Text;
+import com.codeborne.selenide.junit.SoftAsserts;
+import io.qameta.allure.Step;
+import jdk.nashorn.internal.AssertsEnabled;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 
@@ -35,6 +38,7 @@ public class Registration  extends CommonMethods {
     SelenideElement veryWeakPassword=$(By.className("piereg_pass_v_week"));
 
     //Thank you for your registration
+    @Step("Submit registration with old id")
     public void submitRegistrationWithOldId() {
         enterText(firstName, "Rupesh");
         enterText(lastName, "kumar");
@@ -50,7 +54,17 @@ public class Registration  extends CommonMethods {
         enterText(about, "this is for testing purpose");
         enterText(password, "Welcome12#");
         enterText(confirmPassword, "Welcome12#");
-        photo.sendKeys("C:\\Users\\Rupesh\\Downloads\\image.jpg");
+      //  photo.sendKeys("C:\\Users\\Rupesh\\Downloads\\image.jpg");
+          photo.click();
+          try {
+              Runtime.getRuntime().exec("C:\\selenium\\FileUpload.exe");
+          }
+          catch (Exception e){
+              e.printStackTrace();
+          }
+
+
+        sleep(5000);
         clickElement(submitBtn);
         verifyElementPresent(assertMsg);
         assertMsg.shouldHave(Condition.text("Error: Username already exists"));
@@ -58,7 +72,7 @@ public class Registration  extends CommonMethods {
         sleep(5000);
 
     }
-
+@Step("submit Registration Without Password")
     public void submitRegistrationWithoutPassword() {
         enterText(firstName, "Rupesh");
         enterText(lastName, "kumar");
@@ -75,7 +89,9 @@ public class Registration  extends CommonMethods {
         clickElement(submitBtn);
         waitForElementToVisible(noPasswordWarning);
         System.out.println(noPasswordWarning.getText());
-        noPasswordWarning.shouldHave(Condition.text("* This field is required"));
+        noPasswordWarning.shouldNotHave(Condition.text("* This field is required"));
+
+
 
     }
 
@@ -87,7 +103,7 @@ public class Registration  extends CommonMethods {
         System.out.println(miniMumPassword.getText());
         miniMumPassword.shouldHave(Condition.text("* Minimum 8 characters required"));
     }
-
+@Step("Password Strength check")
     public void passwordStrengthCheck() {
 
         enterText(firstName, "Rupesh");

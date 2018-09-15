@@ -2,8 +2,8 @@
 
 <suite name="Test Suite" verbose="1" >
     <listeners>
-        <listener class-name="Listner"/>
-    </listeners>
+        <listener class-name="AnnotationTransformer"/>
+        </listeners>
     <test name="DemoQA" >
         <classes>
             <class name="SmokeTest">

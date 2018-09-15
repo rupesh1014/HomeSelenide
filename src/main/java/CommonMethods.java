@@ -1,5 +1,7 @@
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.*;
+import com.codeborne.selenide.testng.SoftAsserts;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -23,7 +25,7 @@ public class CommonMethods {
 
     Logger log= LoggerFactory.getLogger(CommonMethods.class);
 
-
+@Step("Open base URL")
     public Home openBaseURL(){
 
       Properties pro=new Properties();
@@ -47,6 +49,8 @@ public class CommonMethods {
         element.clear();
         element.setValue(text);
         element.sendKeys(Keys.TAB);
+       // getWebDriver().switchTo().alert().
+
 
     }
     public void clickElement(SelenideElement element){
